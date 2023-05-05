@@ -1,0 +1,77 @@
+.create-event-form-inner{
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 15px;
+}
+.create-event-heading{
+    text-align: center;
+
+}
+.create-event-form{
+    max-width: 1000px;
+}
+.create-event-btn-div{
+    display: flex;
+    justify-content: center;
+}
+.save-btn{
+    background-color: #F5167E;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 15px;
+}
+.save-btn:hover{
+    color:#F5167E;
+    border: 1px solid #F5167E;
+    background-color: white;
+    cursor: pointer;
+}
+.create-event-input{
+    height: 40px;
+    width: 400px;
+}
+
+/* ============================== */
+
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 190px;
+    position: relative;
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+ .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+  }
+
+  /*
+  
+  .inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #e8e8e8;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(150, 150, 200);
+  } */
