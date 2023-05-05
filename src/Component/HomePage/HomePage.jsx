@@ -1,6 +1,6 @@
 import React from "react";
 import "../HomePage/HomePage.css";
-import HomeBG from "../../assest/Home.svg";
+import HomeBG from "../../assest/img/Home.svg";
 function HomePage() {
   return (
     <>
