@@ -1,7 +1,6 @@
 import React from "react";
 import "../HomePage/HomePage.css";
-import HomeBG from "../../assest/Home.svg";
-import { BsSearch } from "react-icons/bs";
+import HomeBG from "../../assest/img/Home.svg";
 function HomePage() {
   return (
     <>
@@ -57,7 +56,7 @@ function HomePage() {
         </div>
       </div>
       <div className="boxcreate">
-        
+
       </div>
     </>
   );
