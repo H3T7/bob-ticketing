@@ -1,6 +1,7 @@
 import React from "react";
 import "../HomePage/HomePage.css";
 import HomeBG from "../../assest/img/Home.svg";
+import {BsSearch} from "react-icons/bs";
 function HomePage() {
   return (
     <>
