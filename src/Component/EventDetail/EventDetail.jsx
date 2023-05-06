@@ -1,17 +1,22 @@
 import React from "react";
 import "../EventDetail/EventDetail.css";
 import EventDetailBG from "../../assest/img/Event_Detail.svg";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function EventDetail() {
   return (
     <>
       <div className="event-detail-main">
+
+        <Header/>
+
         <h1 className="event-detail-title">Event Title</h1>
         <div className="event-detail-img-div">
           <img src={EventDetailBG} alt="" />
         </div>
 
-        <div className="event-detail-container container mt-5">
+        <div className="event-detail-container container mt-5 mb-5">
           <div className="row">
             <div className="col-md-6">
               <div>
@@ -56,6 +61,9 @@ function EventDetail() {
           </div>
           <div className="mt-4 event-detail-btn"><button className="save-btn">Buy</button></div>
         </div>
+
+        <Footer/>
+
       </div>
     </>
   );

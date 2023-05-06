@@ -2,16 +2,20 @@ import React from "react";
 import "../CreateEvent/CreateEvent.css";
 import EventBG from "../../assest/Event.svg";
 import DatePicker from "react-datepicker";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function CreateEvent() {
   return (
     <>
       <div className="create-event-main">
+        <Header />
+
         <div className="create-event-img-div">
           <img src={EventBG} alt="" />
         </div>
 
-        <div className="create-event-form container">
+        <div className="create-event-form container mb-5">
           <h2 className="create-event-heading mt-5 mb-4">Create Event</h2>
 
           <div className="row create-event-form-inner">
@@ -59,22 +63,26 @@ function CreateEvent() {
                 <h5>Event Description</h5>
                 <textarea className="mt-1 create-event-input" />
               </div>
-            </div> 
+            </div>
 
             <div className="create-event-btn-div mt-4 mb-2">
-            <button className="save-btn">Save</button>
+              <button className="save-btn">Save</button>
+            </div>
           </div>
-          </div>
-
-          {/* <div className="input-field">
-    <input type="text" id="name" required />
-    <label for="name">Your Name</label>
-  </div> */}
-         
         </div>
+
+        <Footer/>
+
       </div>
     </>
   );
 }
 
 export default CreateEvent;
+
+{
+  /* <div className="input-field">
+    <input type="text" id="name" required />
+    <label for="name">Your Name</label>
+  </div> */
+}
