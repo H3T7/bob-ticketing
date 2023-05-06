@@ -1,7 +1,10 @@
 .create-event-form-inner{
     border: 1px solid black;
-    padding: 15px;
+    padding: 40px 40px 20px 40px;
     border-radius: 15px;
+}
+.create-event-img-div > img {
+width: 100%;
 }
 .create-event-heading{
     text-align: center;
@@ -34,44 +37,51 @@
 
 /* ============================== */
 
-.inputGroup {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 1em 0 1em 0;
-    max-width: 190px;
-    position: relative;
-  }
-  
-  .inputGroup input {
-    font-size: 100%;
-    padding: 0.8em;
-    outline: none;
-    border: 2px solid rgb(200, 200, 200);
-    background-color: transparent;
-    border-radius: 20px;
-    width: 100%;
-  }
-  
- .inputGroup label {
-    font-size: 100%;
-    position: absolute;
-    left: 0;
-    padding: 0.8em;
-    margin-left: 0.5em;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    color: rgb(100, 100, 100);
-  }
+/* .input-field {
+  position: relative;
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+  font-size: 16px;
+}
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  border-top: 2px solid #d3d3d3;
+  border-left: 2px solid #d3d3d3;
+  border-right: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #111;
+  border-radius: 15px;
+  text-indent: 12px;
+}
 
-  /*
-  
-  .inputGroup :is(input:focus, input:valid)~label {
-    transform: translateY(-50%) scale(.9);
-    margin: 0em;
-    margin-left: 1.3em;
-    padding: 0.4em;
-    background-color: #e8e8e8;
-  }
-  
-  .inputGroup :is(input:focus, input:valid) {
-    border-color: rgb(150, 150, 200);
-  } */
+input:invalid {
+  outline: 0; */
+  /* color: #ff2300;
+  border-color: #ff2300; */
+/* }
+input:focus,
+input:valid {
+  border-color: #F5167E;
+}
+input:focus~label,
+input:valid~label {
+  font-size: 16px;
+  top: -35px;
+  color: #F5167E;
+} */

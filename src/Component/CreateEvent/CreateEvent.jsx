@@ -7,7 +7,7 @@ function CreateEvent() {
   return (
     <>
       <div className="create-event-main">
-        <div className="create-event-img">
+        <div className="create-event-img-div">
           <img src={EventBG} alt="" />
         </div>
 
@@ -59,17 +59,17 @@ function CreateEvent() {
                 <h5>Event Description</h5>
                 <textarea className="mt-1 create-event-input" />
               </div>
-            </div>
+            </div> 
 
             <div className="create-event-btn-div mt-4 mb-2">
             <button className="save-btn">Save</button>
           </div>
           </div>
 
-          <div className="inputGroup">
-    <input type="text" required="" autocomplete="off" />
-    <label for="name">Name</label>
-</div>
+          {/* <div className="input-field">
+    <input type="text" id="name" required />
+    <label for="name">Your Name</label>
+  </div> */}
          
         </div>
       </div>

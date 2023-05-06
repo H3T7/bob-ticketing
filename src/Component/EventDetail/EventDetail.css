@@ -1,0 +1,35 @@
+.event-detail-main{
+    position: relative;
+}
+.event-detail-title{
+    position: absolute;
+    top:250px;
+    color:white;
+    text-decoration: underline;
+    text-align: center;
+    width: 100%;
+    font-size: 60px;
+}
+.event-detail-btn{
+    display: flex;
+    justify-content: center;
+}
+.event-detail-container{
+    border-radius: 15px;
+    padding: 40px 40px 20px 40px;
+    border: 1px solid black;
+}
+.event-detail-text{
+    color:#F5167E;
+    font-size: 18px;
+    font-weight: 500;
+}
+.event-detail-num{
+text-align: center;
+}
+.event-detail-img-div > img {
+    width: 100%;
+}
+.event-detail-nums{
+    font-size: 25px;
+}
