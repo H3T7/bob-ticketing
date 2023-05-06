@@ -1,0 +1,7 @@
+.footerBg{
+    position: absolute;
+    /* width: 1920px; */
+    height: 250px;
+    background: #150024;
+    color: white;
+}
