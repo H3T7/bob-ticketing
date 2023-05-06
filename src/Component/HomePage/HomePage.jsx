@@ -5,10 +5,92 @@ import { BsSearch } from "react-icons/bs";
 import createimg from "../../assest/img/createimg.png";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function HomePage() {
+   const settings = {
+     dots: true,
+     infinite: false,
+     speed: 500,
+     slidesToShow: 4,
+     slidesToScroll: 4,
+     initialSlide: 0,
+     responsive: [
+       {
+         breakpoint: 1024,
+         settings: {
+           slidesToShow: 3,
+           slidesToScroll: 3,
+           infinite: true,
+           dots: true,
+         },
+       },
+       {
+         breakpoint: 600,
+         settings: {
+           slidesToShow: 2,
+           slidesToScroll: 2,
+           initialSlide: 2,
+         },
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+         },
+       },
+     ],
+   };
+   const Images = [
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+     {
+       img: HomeBG,
+     },
+   ];
   return (
     <>
-    <Header/>
+      <Header />
       <div className="homepage">
         <img src={HomeBG} alt="" className="w-100" />
       </div>
@@ -47,51 +129,49 @@ function HomePage() {
           </div>
         </div>
         <br />
-        <h2 className="text-center mt-5 texthome">Events</h2>
+        <h2 className="text-center mt-3 texthome">Events</h2>
         <div className="p-4">
-          <div className="row">
-            <div className="col-md-4">
-              <img src={HomeBG} alt="" className="eventsimage" />
-            </div>
-            <div className="col-md-4">
-              <img src={HomeBG} alt="" className="eventsimage" />
-            </div>
-            <div className="col-md-4">
-              <img src={HomeBG} alt="" className="eventsimage" />
-            </div>
-          </div>
+          <Slider {...settings}>
+            {Images.map((item, index) => {
+              return (
+                <div key={index} className="p-2">
+                  <img src={item.img} alt="" className="eventsimage" />
+                </div>
+              );
+            })}
+          </Slider>
         </div>
         <div className="row">
-          <div className="boxcreate ">
+          <div className="boxcreate mt-4">
             <div className="row">
-            <div className="col-md-6 text-center">
-              <img src={createimg} alt="" className="imgcreate" />
-            </div>
-            <div className="col-md-6 mt-5">
-              <h4>Create your own Event </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <button className="eventBtn">Create Event</button>
-            </div>
+              <div className="col-md-6 text-center">
+                <img src={createimg} alt="" className="imgcreate" />
+              </div>
+              <div className="col-md-6 mt-5">
+                <h4>Create your own Event </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button className="eventBtn">Create Event</button>
+              </div>
             </div>
           </div>
         </div>
-         <br />
-        <h2 className="text-center upcomingevent texthome">Upcoming Events</h2>
-        <div className="p-4 mt-4">
-          <div className="row">
-            <div className="col-md-4">
-              <img src={HomeBG} alt="" className="eventsimage" />
-            </div>
-            <div className="col-md-4">
-              <img src={HomeBG} alt="" className="eventsimage" />
-            </div>
-            <div className="col-md-4">
-              <img src={HomeBG} alt="" className="eventsimage" />
-            </div>
+        <br />
+        <h2 className="text-center py-3 upcomingevent texthome">Upcoming Events</h2>
+        <div className="p-4 mt-2">
+          <div>
+            <Slider {...settings}>
+              {Images.map((item, index) => {
+                return (
+                  <div key={index} className="p-2">
+                    <img src={item.img} alt="" className="eventsimage" />
+                  </div>
+                );
+              })}
+            </Slider>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -113,3 +113,9 @@
 .slide_btn a.next {
   right: 10px;
 }
+.slick-prev,
+.slick-next{
+background-color: gray !important;
+color: #ffffff !important;
+border-radius: 20px;
+}
