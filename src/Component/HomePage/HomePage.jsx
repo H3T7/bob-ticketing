@@ -4,9 +4,11 @@ import HomeBG from "../../assest/img/Home.svg";
 import { BsSearch } from "react-icons/bs";
 import createimg from "../../assest/img/createimg.png";
 import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 function HomePage() {
   return (
     <>
+    <Header/>
       <div className="homepage">
         <img src={HomeBG} alt="" className="w-100" />
       </div>
