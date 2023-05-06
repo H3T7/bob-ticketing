@@ -1,6 +1,6 @@
 import React from "react";
 import "../CreateEvent/CreateEvent.css";
-import EventBG from "../../assest/Event.svg";
+import EventBG from "../../assest/img/Event.svg";
 import DatePicker from "react-datepicker";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
