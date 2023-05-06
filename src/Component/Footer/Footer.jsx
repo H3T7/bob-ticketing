@@ -1,13 +1,13 @@
 import React from "react";
 import "../Footer/Footer.css";
-
+import footerLogo from "../../assest/img/favicon.png";
 function Footer() {
   return (
     <>
       <div className="d-flex footerBg ">
         <div className="row w-100 mt-5">
-          <div className="col-md-6 text-center">
-            <h3>Logo Here</h3>
+          <div className="col-md-6 text-center ">
+            <img src={footerLogo} alt="" className="footerlogo"/>
           </div>
           <div className="col-md-6">
           <p className="">
