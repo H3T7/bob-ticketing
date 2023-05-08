@@ -72,7 +72,7 @@ function AllEvents() {
             </div>
           </div>
           <hr />
-          <div className="MyEvents-main mt-5">
+          <div className="MyEvents-main all-events-cards">
           <MyEventsCard/>
           <MyEventsCard/>
           <MyEventsCard/>
