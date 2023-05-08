@@ -64,9 +64,8 @@ function AllEvents() {
                   <option selected disabled>
                     Category
                   </option>
-                  <option>category 1</option>
-                  <option>category 1</option>
-                  <option>Any category</option>
+                  <option>Category 1</option>
+                  <option>Category 2</option>
                 </select>
               </div>
             </div>
