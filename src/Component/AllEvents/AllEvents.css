@@ -50,3 +50,26 @@
     margin-top: -10px;
     margin-bottom: 0px;
 }
+.all-events-2{
+    margin-top: 70px;
+}
+.all-events-2-title-dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+.all-events-2-dropdown{
+    display: flex;
+    gap: 20px;
+}
+hr {
+    margin: 20px 50px;
+}
+.all-events-2-select{
+    height: 45px;
+    padding: 0px 15px;
+    border-radius: 10px;
+    background-color: #F7F8FA;
+}
+
