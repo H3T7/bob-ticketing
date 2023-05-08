@@ -74,7 +74,52 @@ hr {
 }
 .all-events-cards{
     margin: 0px 40px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     margin-top: 35px;
+}
+.all-events-seemore-btn{
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    margin-top: -70px !important;
+}
+.all-events-seemore-btn > button {
+    border: 1px solid #d7d8d8;
+    background-color: #F7F8FA;
+padding: 10px 20px;
+border-radius: 10px;
+scale:0.9;
+}
+.all-events-seemore-btn > button:hover{
+    /* border: 1px solid black; */
+    background-color: white;
+    color:#F5167E;
+}
+.all-events-seemore-icon{
+    color:#b9b9b9;
+}
+.abc{
+    position: relative;
+}
+.all-events-img{
+    height: 280px;
+    position: absolute;
+    top:-50px;
+    right: 155px;
+}
+.all-events-img-div{
+  background: #eee1ff;
+  height: 230px;
+  margin-top: 100px;
+}
+.all-events-img-text{
+    margin-top: 40px;
+    padding-inline-start: 60px;
+}
+.all-events-img-line{
+    /* background-color: red; */
+    font-size: 18px;
+    /* background-color: lightblue; */
+    line-height: 25px;
 }
 

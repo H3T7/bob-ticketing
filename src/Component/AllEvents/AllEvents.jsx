@@ -1,9 +1,12 @@
 import React from "react";
 import "../AllEvents/AllEvents.css";
+import { Link } from "react-router-dom";
+import createimg from "../../assest/img/createimg.png";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import AllEventsBG from "../../assest/img/All_Events.svg";
 import MyEventsCard from "../Profile/MyEventsCard";
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 function AllEvents() {
   return (
@@ -72,16 +75,69 @@ function AllEvents() {
           </div>
           <hr />
           <div className="MyEvents-main all-events-cards">
-          <MyEventsCard/>
-          <MyEventsCard/>
-          <MyEventsCard/>
-          <MyEventsCard/>
-          <MyEventsCard/>
-          <MyEventsCard/>
+            <MyEventsCard />
+            <MyEventsCard />
+            <MyEventsCard />
+            <MyEventsCard />
+            <MyEventsCard />
+            <MyEventsCard />
+            <MyEventsCard />
+            <MyEventsCard />
           </div>
         </div>
 
+        <div className="all-events-seemore-btn">
+        <button>
+          See More  <KeyboardDoubleArrowDownIcon className="all-events-seemore-icon"/>
+        </button>
+        </div>
+
+        {/* <div className="row">
+          <div className="boxcreate mt-4">
+            <div className="row">
+              <div className="col-md-6 text-center">
+                <img src={createimg} alt="" className="imgcreate" />
+              </div>
+              <div className="col-md-6 mt-5">
+                <h4>Create your own Event </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <Link to="/createevent">
+                <button className="eventBtn">Create Event</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div> */}
+
+        <div className="row all-events-img-div">
+          <div className="col-md-6 text-center abc"><img src={createimg} alt="" className="all-events-img" /></div>
+          {/* <div className="col-md-1"></div> */}
+          <div className="col-md-6 all-events-img-text">
+          <h2>Create your own Event </h2>
+                <p className="all-events-img-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <Link to="/createevent">
+                <button className="eventBtn mt-2">Create Event</button>
+                </Link>
+          </div>
+          
+        </div>
+
+        
+              <h2 style={{padding: '0px 50px', marginTop:'50px'}}>
+                Upcoming <span style={{ color: "#7848F4" }}>Events</span>
+              </h2>
+              
+            <hr/>
+            <div className="MyEvents-main all-events-cards">
+            <MyEventsCard />
+            <MyEventsCard />
+            <MyEventsCard />
+            </div>
+
+        
+
         <Footer />
+        {/* <div style={{ backgroundColor: "pink", height: "200px", marginTop:'100px' }}></div> */}
       </div>
     </>
   );
