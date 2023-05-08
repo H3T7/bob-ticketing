@@ -1,7 +1,18 @@
-.loginBox{
-    border: 1px solid black;
+.logintitletext {
+  color: #d01c68;
 }
-.closeIcon{
-    height: 30px;
-    width: 30px;
+.closeIcon {
+  height: 30px;
+  width: 30px;
+}
+.signUpBtn {
+  background-color: #d01c68;
+  color: white;
+  width: 138px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+.css-13r4j3i .MuiTextField-root{
+    width: 45ch !important;
 }

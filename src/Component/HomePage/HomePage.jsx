@@ -8,6 +8,7 @@ import Header from "../Header/Header";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 function HomePage() {
    const settings = {
@@ -150,7 +151,9 @@ function HomePage() {
               <div className="col-md-6 mt-5">
                 <h4>Create your own Event </h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <Link to="/createevent">
                 <button className="eventBtn">Create Event</button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,29 +1,49 @@
 import React from "react";
 import "../Login/Login.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
 function Login() {
   return (
     <>
-      <div className="container loginBox">
-        <div className="d-flex justify-content-end">
-          <AiOutlineCloseCircle className="closeIcon" />
-        </div>
-        <h2 className="text-center">BoB Event Ticketing</h2>
+      <div className="container">
+        <h2 className="text-center logintitletext">BoB Event Ticketing</h2>
         <div className="signInBox">
-          <h3>Sign In</h3>
+          <h3 className="mt-4">Sign In</h3>
           <div className="loginForm">
-            <h5>Email</h5>
-            <input type="text" name="" id="" />
-            <div className="d-flex justify-content-between">
-              <h5>Password</h5>
-              <h5>Forgot Password?</h5>
-            </div>
-            <input type="password" name="" id="" />
-
+            <Box
+              component="form"
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "25ch" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <div>
+                <TextField
+                  id="outlined-textarea"
+                  label="Email"
+                  placeholder="Enter Email"
+                  multiline
+                />
+              </div>
+              <div>
+                <TextField
+                  id="outlined-textarea"
+                  label="Password"
+                  placeholder="Enter Password"
+                  multiline
+                />
+              </div>
+            </Box>
+            <p className="text-end">Forgot Password?</p>
             <div className="d-flex justify-content-center">
-              <button className="signUpBtn">Sign Up</button>
+              <button className="signUpBtn mt-3">Sign Up</button>
             </div>
-              <h5 className="text-center">Don't have account? <b> Sign Up</b></h5>
+            <p className="text-center mt-2">
+              Don't have account? <b className="logintitletext"> Sign Up</b>
+            </p>
           </div>
         </div>
       </div>

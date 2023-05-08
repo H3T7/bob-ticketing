@@ -1,25 +1,48 @@
 import React, { useState } from "react";
 import "../Header/Header.css";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import Login from "../Login/Login";
+import Modal from "@mui/material/Modal";
+import { IoMdAdd, IoIosCloseCircleOutline } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+
 // import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Create Event'];
-const settings = ['Profile', 'Logout'];
+const pages = ["Create Event", "Login"];
+const settings = ["Profile", "Logout"];
 
 function Header() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
+  const [popup, setPopup] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false);
+  const handleOpenLogin = () => setOpenLogin(true);
+  const handleCloseLogin = () => setOpenLogin(false);
+
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 500,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+    borderRadius: "20px",
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -32,14 +55,27 @@ function Header() {
     setAnchorElNav(null);
   };
 
+  const handleCloseNavLogin = () => {
+    setAnchorElNav(null);
+    handleOpenLogin();
+  };
+  const redirect = (pathname) => {
+    navigate("/" + pathname);
+  };
+  const MobRedirect = (path) => {
+    navigate("/" + path);
+    handleCloseNavMenu();
+  };
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
 
   return (
     <>
-      <AppBar position="static"
-      style={{ backgroundColor: "white", color: "black" }}>
+      <AppBar
+        position="static"
+        style={{ backgroundColor: "white", color: "black" }}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -92,7 +128,7 @@ function Header() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="end">{page}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -116,17 +152,43 @@ function Header() {
             >
               LOGO
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                  style={{color:"black"}}
-                >
-                  {page}
-                </Button>
-              ))}
+            <Box
+              sx={{
+                flexGrow:  { sx: 0, md: 0, xl: 1 },
+                display: { xs: "none", md: "flex" },
+              }}
+            >
+              {/* {pages.map((page) => ( */}
+              <Button
+                // key={page}
+                onClick={() => redirect("createevent")}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  flexGrow: 1,
+                  fontSize: 17,
+                }}
+                style={{ color: "black", textAlign: "end" }}
+              >
+                {/* {page} */}
+                Create Event
+              </Button>
+              <Button
+                // key={page}
+                onClick={handleCloseNavLogin}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  mx: 2,
+                  fontSize: 17,
+                }}
+                style={{ color: "black", textAlign: "end" }}
+              >
+                Login
+              </Button>
+              {/* ))}  */}
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
@@ -161,6 +223,31 @@ function Header() {
           </Toolbar>
         </Container>
       </AppBar>
+      {/* {popup === true ? (
+        <>
+        <Login/>
+        </>
+        ) : (
+        ""
+      )} */}
+      <Modal
+        open={openLogin}
+        onClose={handleCloseLogin}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <div>
+            <div className="d-flex justify-content-end">
+              <IoIosCloseCircleOutline
+                className="closeIcon"
+                onClick={handleCloseLogin}
+              />
+            </div>
+            <Login />
+          </div>
+        </Box>
+      </Modal>
     </>
   );
 }
