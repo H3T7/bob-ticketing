@@ -11,7 +11,7 @@ const MyEventsCard = () => {
         </div>
         <div className="my-event-card-title mt-3">
           <h5>
-            BestSeller Book Bootcamp - write, Market & Publish Your Book -
+            BestSeller Book Bootcamp - Write, Market & Publish Your Book -
             Lucknow
           </h5>
         </div>

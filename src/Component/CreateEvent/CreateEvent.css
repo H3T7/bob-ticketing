@@ -23,6 +23,7 @@ width: 100%;
     border: none;
     padding: 8px 25px;
     border-radius: 15px;
+    border: 1px solid #F5167E;
 }
 .save-btn:hover{
     color:#F5167E;
